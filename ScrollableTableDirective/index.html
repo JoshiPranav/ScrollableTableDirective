@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Westpac Test</title>
+    <!-- css -->
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+
+<body data-ng-app="App" data-ng-controller="AppController">
+    <div id="container" data-scrollable-table data-datasource="datasource" data-preloaded="preloaded" data-loadfn="getMore" data-templateid="singleColumnTemplate">
+    </div>
+
+    <!-- templates -->
+    <script type="text/ng-template" id="singleColumnTemplate">
+        <table>
+            <tbody>
+                <tr class='row-height-20' ng-class-odd="'odd'" data-ng-repeat="item in datasource track by $index">
+                    <td>
+                        {{item}}
+                    </td>
+                </tr>
+            </tbody>
+        <table>
+    </script>
+
+    <!-- json data script -->
+    <script src="js/hamlet.js"></script>
+
+    <!-- angular -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+
+    <!-- js -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
